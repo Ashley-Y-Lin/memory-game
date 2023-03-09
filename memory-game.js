@@ -39,17 +39,19 @@ function shuffle(items) {
  */
 
 function createCards(colors) {
-  for (let color of colors) {
-    // missing code here ...
-    var $colorCard = $("<div>").addClass(color)
-    $colorCard.addClass('card')
+  var gameBoard = document.getElementById("game");
 
-    $colorCard.on("click", function(event){
-      console.log("a card was clicked")
-      flipCard(event.target)
-    })
+  for (var i = 0; i < colors.length; i++) {
+    var color = colors[i];
+    var colorCard = document.createElement("div");
+    colorCard.classList.add(color, "card");
 
-    $("#game").append($colorCard)
+    colorCard.addEventListener("click", function(event){
+      console.log("a card was clicked");
+      flipCard(event.target);
+    });
+
+    gameBoard.appendChild(colorCard);
   }
 }
 
