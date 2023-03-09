@@ -1,0 +1,19 @@
+#game{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid black;
+  width: 100px;
+  height: 130px;
+  margin: 20px;
+}
+
+header{
+  text-align: center;
+}
+
+
